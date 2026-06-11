@@ -1,1 +1,0 @@
-import{ak as e,W as a,X as n}from"./O7XmFjlR.js";import{u as r}from"./BZcxgOTU.js";const d=e(()=>{const t=a(),o=r();if(t.isAuthenticated&&!t.isOnboardingComplete)return n(`/onboarding/step-${o.lastCompletedStep+1}`)});export{d as default};
