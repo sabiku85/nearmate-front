@@ -1,0 +1,1 @@
+import{u as n}from"./BZcxgOTU.js";import{U as a,a4 as s,X as r}from"./O7XmFjlR.js";const m=a({__name:"index",async setup(i){let t,e;const o=n();return[t,e]=s(()=>r(`/onboarding/step-${o.lastCompletedStep+1}`)),await t,e(),()=>{}}});export{m as default};
