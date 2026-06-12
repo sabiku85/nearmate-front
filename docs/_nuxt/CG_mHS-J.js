@@ -1,0 +1,1 @@
+import{_ as o}from"./DlAUqK2U.js";import{o as t,c as a,a as s,z as c}from"./C7CnQRWt.js";const r={},n={class:"page-shell"},d={class:"auth-shell"},l={class:"auth-card"};function _(e,i){return t(),a("div",n,[s("div",d,[s("div",l,[c(e.$slots,"default")])])])}const p=o(r,[["render",_]]);export{p as default};
