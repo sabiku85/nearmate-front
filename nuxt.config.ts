@@ -73,7 +73,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || "/",
+    baseURL: import.meta.env.NUXT_APP_BASE_URL || "/",
     head: {
       title: "nearMate",
       meta: [
