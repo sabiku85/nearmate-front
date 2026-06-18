@@ -1,75 +1,38 @@
-# Nuxt Minimal Starter
+# nearMate
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- **Intro**:
+  nearMate is a Nuxt 4 frontend for a social discovery app. It includes authentication, onboarding, activity browsing, invitations, chat, and profile flows. The current implementation uses local mock data, so you can run it without a backend.
 
-## Setup
+- **Tech Stack**:
+  Nuxt 4, Vue 3, TypeScript, Pinia, Nuxt UI, Tailwind CSS 4, Zod, Day.js, `@nuxt/image`, `@nuxt/icon`, `@vite-pwa/nuxt`, `nuxt-security`, `@nuxtjs/google-fonts`, `@nuxtjs/html-validator`, and `Vitest`.
 
-Make sure to install dependencies:
+- **Project Structure**:
+  `app/` contains the application code, including pages, components, layouts, middleware, plugins, composables, and assets.
+  `stores/` holds the Pinia stores for auth, activities, chat, discovery, invitations, and onboarding.
+  `data/` contains the mock database used by the stores.
+  `shared/` defines shared TypeScript types.
+  `public/` stores static assets such as `favicon.ico` and `robots.txt`.
+  `docs/` is the generated static output used for GitHub Pages deployment.
+- **Getting Started**:
+  - **Prerequisites:**
+    Node.js 20+ and `pnpm` are recommended. This repository includes a `pnpm-lock.yaml`, so `pnpm` is the default package manager.
 
-```bash
-# npm
-npm install
+  - **Installation:**
+    run `pnpm install`.
 
-# pnpm
-pnpm install
+  - **Available Scripts:**
+    `pnpm dev` starts the local dev server,
+    `pnpm build` creates a production build,
+    `pnpm preview` serves the production build locally,
+    `pnpm generate` creates the static GitHub Pages output using `.env.gh`.
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- **Development**:
+  - Nuxt route middleware (`auth`, `guest`, `onboarding`) to control access,
+  - Pinia stores for application state,
+  - a mock data layer in `data/mockDb.ts`,
+  - `useChatTransport` to simulate chat activity.
+  - UI styling comes from Nuxt UI and Tailwind CSS,
+  - `@nuxtjs/google-fonts` provides the Lexend Deca font,
+  - `nuxt-security` adds security headers,
+  - `@nuxtjs/html-validator` checks HTML output,
+  - `@vite-pwa/nuxt` supports PWA behavior.

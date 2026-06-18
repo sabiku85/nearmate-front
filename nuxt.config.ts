@@ -20,6 +20,32 @@ export default defineNuxtConfig({
     "dayjs-nuxt",
     "nuxt-security",
   ],
+  routeRules: {
+    // "/": { prerender: true },
+    // "/auth/**": { ssr: false },
+    // "/dashboard/**": { ssr: true },
+  },
+  runtimeConfig: {
+    public: {
+      apiBase: import.meta.env.NUXT_PUBLIC_API_BASE ?? "/api",
+    },
+  },
+  security: {
+    headers: {
+      contentSecurityPolicy: {
+        // "default-src": ["'self'"],
+        // "script-src": ["'self'"],
+        // "style-src": ["'self'", "'unsafe-inline'"],
+        // "img-src": [
+        //   "'self'",
+        //   "data:",
+        //   "blob:",
+        //   "https://app-connect-people-j9sh.onrender.com",
+        // ],
+        // "connect-src": ["'self'"],
+      },
+    },
+  },
   colorMode: {
     preference: "light", // default value of $colorMode.preference
     fallback: "light", // fallback value if not system preference found
@@ -47,6 +73,7 @@ export default defineNuxtConfig({
     },
   },
   app: {
+    baseURL: import.meta.env.NUXT_APP_BASE_URL || "/",
     head: {
       title: "nearMate",
       meta: [
