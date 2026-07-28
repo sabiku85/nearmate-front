@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBase: import.meta.env.NUXT_PUBLIC_API_BASE ?? "/api",
+      apiBase: 'ttps://app-connect-people-j9sh.onrender.com/api/v1',
     },
   },
   security: {
