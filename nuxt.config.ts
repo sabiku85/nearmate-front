@@ -27,7 +27,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBase: 'ttps://app-connect-people-j9sh.onrender.com/api/v1',
+      // @ts-expect-error: process is available in Node runtime
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'https://app-connect-people-j9sh.onrender.com/api/v1',
     },
   },
   security: {
